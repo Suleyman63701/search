@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="seoApp">
+  <head>
+    <title>Vintage Software SEO</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <script src="/javascripts/app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div ng-controller="myController">
+      <div class="body">
+      <img class="thumbnail" src='/images/logo.png' />
+      <div class="entryBox" ng-Show="showentrybox">
+        <h1 class="center">SEO-Site</h1>
+        <form ng-submit="submit()">
+          <input type="text" ng-model="text" name="text">
+          <input type="submit" value="submit">
+        </form>
+        <p class="warning" ng-Show="showURLwarning">Error: Bad URL?</p>
+   </div>
+
+
+      <!-- Here is where the results are displayed-->
+      <div class="ResultsDisplay">
+
+        <div class="loader" ng-Show="showloader"></div>
+
+        <!--Return Button -->
+        <p class="reset" ng-show="showrulesinfo" ng-click="resetPage()">Return</p>
+        <!--Various Warnings -->
+        <p class="warning" ng-Hide="redirectstohttps">Site did not redirect to HTTPS</p>
+        <!--Header - loader - displayinfo -->
+        <p class="url" ng-Show="showrulesinfo">{{ url }}<p>
+        <h1 ng-click="rulesExpand()" ng-Show="showrulesinfo">{{ resultsheadertext }}</h1>
+        <p ng-Show="showrulesinfo">Passed: {{ passedrules }}/{{ totalrules }}</p>
+        <div ng-Show="showruleresults">
+
+          <div ng-repeat="item in ruleresults">
+            <div ng-switch="item.passed">
+              <div ng-switch-when="true">
+                  <h3 class="passed">{{ item.name }}</h3>
+              </div>
+              <div ng-switch-when="false">
+                <h3 class="failed">{{ item.name }}</h3>
+              </div>
+            </div>
+            <h4>Did Rule Pass? : {{ item.passed }}</h4>
+            <h4>Description:</h4>
+            <p class="results"> {{ item.description }}</p><br>
+            <hr>
+          </div>
+        </div>
+
+        <!-- Section for SpeedPageInsights Info-->
+        <!--Header - loader - (div)displayinfo -->
+        <h1 ng-click="speedExpand()" ng-Show="showspeedinfo">{{ pagespeedheadertext }}</h1>
+        <p ng-Show="showspeedinfo">Score: {{ jsonfile.ruleGroups.SPEED.score }}/100 Issues: {{ numissues }}</p>
+        <div ng-Show="showspeedinfo">
+        <table class="selectiontable">
+          <tr>
+          <td ng-style="selectmobilecss">
+          <p class="selection" ng-click="selectMobile()">Mobile</p>
+          </td><td ng-style="selectdesktopcss">
+          <p class="selection" ng-click="selectDesktop()">Desktop</p>
+          </td>
+          </tr>
+        </table>
+        </div>
+
+	   <div ng-Show="showspeedresults">
+          <div ng-repeat="(key, item) in jsonfile.formattedResults.ruleResults">
+            <div ng-if="item.ruleImpact > 0">
+              <h3 class="failed">{{ item.localizedRuleName }}</h3>
+            </div>
+            <div ng-if="item.ruleImpact == 0">
+              <h3 class="passed">{{ item.localizedRuleName }}</h3>
+            </div>
+            <!-- localizedRuleName, ruleImpact, groups(array)-->
+            <h4 class="results">Rule Impact: {{ item.ruleImpact }}</h4>
+            <!--<h4>Groups</h4>
+            <ul ng-repeat="item2 in item.groups">
+              <li>{{ item2 }}</li>
+            </ul> -->
+            <h4 class="results">Summary</h4>
+            <p class="results" ng-bind-html="item.summary.format | unsafe"></p>
+            <br>
+            <hr>
+            <!--<h5>Arguments</h5>
+            <ul ng-repeat="(key2, item2) in item.summary.args">
+                <li><b>{{ key2 }}:</b>  {{ item2 }}</li>
+            </ul>
+            <br> -->
+          </div><!--ng-repeat div element-->
+        </div><!--speedtestresults-->
+
+        <!--Iframe for displaying structure data test-->
+      </div> <!--ResultsDisplay-->
+      <p class="bottom">Student Project</p>
+    </div>
+    </div>
+  </body>
+</html>

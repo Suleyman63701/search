@@ -1,0 +1,125 @@
+.url {
+  text-align: center;
+  font-size: 16pt;
+  color: #333333;
+}
+
+
+
+.body {
+  margin: auto;
+  width: 50%;
+  max-width: 50em;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FFFFFF;
+}
+
+.selectiontable{
+  width: 15em;
+}
+
+.selection {
+  font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.bottom{
+  text-decoration-style: wavy;
+  text-decoration: overline;
+  color: #AAAAEE;
+  background-color: #EEEEEE;
+  text-align: center;
+  position: fixed;
+  top: 90%;
+  left: 5%;
+}
+
+.reset{
+  position: fixed;
+  background-color: #EEEEEE;
+  top: 10%;
+  left: 20%;
+}
+
+.passed{
+  color: #33cc33;
+}
+
+.failed{
+    color: #FF0000;
+}
+
+.results{
+  position: relative;
+  left: 3em;
+}
+
+.thumbnail{
+  height: 11em;
+  height: 9em;
+  display: block;
+  margin: auto;
+  width: 13em;
+
+}
+
+.fullpage{
+  position: absolute;
+  max-width: none;
+  width: 100%;
+  margin: 0px;
+
+}
+
+h1 {
+  text-align: left;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.warning {
+  font-weight: bold;
+  color: #FF2727
+}
+.entryBox {
+  text-align: center;
+}
+
+input[type=text]{
+  width: 50%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+  width: 13%;
+  padding: 5px 10px;
+  margin: 3px 0;
+  box-sizing: border-box;
+}
+
+.loader {
+    position: absolute;
+    left: 47%;
+    top: 30%;
+    border: 16px solid #E3E3E3; /* Light grey */
+    /*Red for increased speed*/
+    border-top: 16px solid #15C2FF; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    /*HYPER SPEED LOADING!*/
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

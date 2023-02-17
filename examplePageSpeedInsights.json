@@ -1,0 +1,898 @@
+{
+ "kind": "pagespeedonline#result",
+ "id": "https://www.yahoo.com/",
+ "responseCode": 200,
+ "title": "Yahoo",
+ "ruleGroups": {
+  "SPEED": {
+   "score": 74
+  }
+ },
+ "pageStats": {
+  "numberResources": 62,
+  "numberHosts": 6,
+  "totalRequestBytes": "20712",
+  "numberStaticResources": 43,
+  "htmlResponseBytes": "456940",
+  "cssResponseBytes": "305629",
+  "imageResponseBytes": "409452",
+  "javascriptResponseBytes": "2499647",
+  "otherResponseBytes": "3224",
+  "numberJsResources": 20,
+  "numberCssResources": 3
+ },
+ "formattedResults": {
+  "locale": "en_US",
+  "ruleResults": {
+   "AvoidLandingPageRedirects": {
+    "localizedRuleName": "Avoid landing page redirects",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your page has no redirects. Learn more about {{BEGIN_LINK}}avoiding landing page redirects{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+      }
+     ]
+    }
+   },
+   "EnableGzipCompression": {
+    "localizedRuleName": "Enable compression",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "You have compression enabled. Learn more about {{BEGIN_LINK}}enabling compression{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+      }
+     ]
+    }
+   },
+   "LeverageBrowserCaching": {
+    "localizedRuleName": "Leverage browser caching",
+    "ruleImpact": 0.9982638888888888,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Leverage browser caching{{END_LINK}} for the following cacheable resources:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}} (expiration not specified)",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://comet.yahoo.com/comet"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}} ({{LIFETIME}})",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/zz/nn/lib/metro/g/my/yahoo_en-US_f_p_190x45_2x.png"
+          },
+          {
+           "type": "DURATION",
+           "key": "LIFETIME",
+           "value": "2.5 minutes"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "MainResourceServerResponseTime": {
+    "localizedRuleName": "Reduce server response time",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your server responded quickly. Learn more about {{BEGIN_LINK}}server response time optimization{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/Server"
+      }
+     ]
+    }
+   },
+   "MinifyCss": {
+    "localizedRuleName": "Minify CSS",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your CSS is minified. Learn more about {{BEGIN_LINK}}minifying CSS{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+      }
+     ]
+    }
+   },
+   "MinifyHTML": {
+    "localizedRuleName": "Minify HTML",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your HTML is minified. Learn more about {{BEGIN_LINK}}minifying HTML{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+      }
+     ]
+    }
+   },
+   "MinifyJavaScript": {
+    "localizedRuleName": "Minify JavaScript",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your JavaScript content is minified. Learn more about {{BEGIN_LINK}}minifying JavaScript{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+      }
+     ]
+    }
+   },
+   "MinimizeRenderBlockingResources": {
+    "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
+    "ruleImpact": 12.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Your page has {{NUM_SCRIPTS}} blocking script resources and {{NUM_CSS}} blocking CSS resources. This causes a delay in rendering your page.",
+     "args": [
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_SCRIPTS",
+       "value": "1"
+      },
+      {
+       "type": "INT_LITERAL",
+       "key": "NUM_CSS",
+       "value": "3"
+      }
+     ]
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML."
+      }
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Remove render-blocking JavaScript{{END_LINK}}:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/rq/darla/2-9-9/js/g-r-min.js"
+          }
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimize CSS Delivery{{END_LINK}} of the following:",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/os/fp/atomic-css.ecb4cafb.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/zz/combo?/os/stencil/3.1.0/styles-ltr.css&/os/yc/css/bundle.c60a6d54.css"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "{{URL}}",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/zz/combo?/nn/lib/metro/g/myy/advance_base_rc4_0.0.48.css&/nn/lib/metro/g/myy/font_rc4_0.0.51.css&/nn/lib/metro/g/myy/yahoo20_grid_0.0.132.css&/nn/lib/metro/g/myy/video_styles_0.0.24.css&/nn/lib/metro/g/myy/advance_color_0.0.8.css&/nn/lib/metro/g/theme/viewer_modal_center_0.0.18.css&/nn/lib/metro/g/theme/yglyphs-legacy_0.0.6.css&/nn/lib/metro/g/sda/fp_sda_0.0.6.css&/nn/lib/metro/g/sda/sda_advance_0.0.9.css&/nn/lib/metro/g/fpfooter/advance_0.0.5.css"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "OptimizeImages": {
+    "localizedRuleName": "Optimize images",
+    "ruleImpact": 21.212300000000003,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "Properly formatting and compressing images can save many bytes of data."
+    },
+    "urlBlocks": [
+     {
+      "header": {
+       "format": "{{BEGIN_LINK}}Optimize the following images{{END_LINK}} to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+       "args": [
+        {
+         "type": "HYPERLINK",
+         "key": "LINK",
+         "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+        },
+        {
+         "type": "BYTES",
+         "key": "SIZE_IN_BYTES",
+         "value": "207.2KiB"
+        },
+        {
+         "type": "PERCENTAGE",
+         "key": "PERCENTAGE",
+         "value": "59%"
+        }
+       ]
+      },
+      "urls": [
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/GsQG1brdOY7YSaD07k6w7Q--/Zmk9c3RyaW07aD0zODg7cHlvZmY9MDtxPTk1O3c9NzIwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/xYHpkdpgBN.OvJfsXSe9yg--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-23/b4ba5010-0ff6-11e7-88a8-433584dff929_BostonN2K.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "36.1KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "48%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/oLwxbjLJaV1cSdUhv.px_Q--/Zmk9c3RyaW07aD0zODY7cHlvZmY9MDtxPTgwO3c9NDQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/harper_s_bazaar_391/7914cb1ec8df6c80caf2cc32e223cfc3"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "26.7KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "85%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/kk0iYAJlAa2nsBy0y4.Omg--/Zmk9c3RyaW07aD00MTQ7cHlvZmY9MDtxPTgwO3c9NDE0O3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://l.yimg.com/cv/ae/default/170323/shots-fired.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "21.5KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "65%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/tRt5gSdDarC3Xq3vmbFwZg--/Zmk9c3RyaW07aD0zODY7cHlvZmY9MDtxPTgwO3c9NDQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/marie_claire_447/fd976cf84c32c00abbf12943df145381"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "18.1KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "82%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/JcZ5nU3G8fRP0wlltXiiUQ--/Zmk9c3RyaW07aD0zODY7cHlvZmY9MDtxPTgwO3c9NDQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-GB/homerun/international_business_times_news_7/353e2e4205771aa6c574b3e300b528fd"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "16.9KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "82%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/LTsHzPhySNFr_0_wvQRF4w--/Zmk9c3RyaW07aD0xNjA7cHlvZmY9MDtxPTgwO3c9MzQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/7S7S3z44Hg853nKZnYidUw--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-23/799016a0-1000-11e7-9824-011ebca27c52_ponder_14.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "14.4KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "92%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/PzQHRvYh.i8PRI5NvFc1Fg--/Zmk9c3RyaW07aD0yMTQ7cHlvZmY9MDtxPTgwO3c9MzgwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/golf_810/048bb4cf142fa72a04aab92d3a85fdcc"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "12.7KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "86%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/2TYkoSVKhu33_Nzxmva9Lw--/Zmk9c3RyaW07aD0xNjA7cHlvZmY9MDtxPTgwO3c9MzQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/QetzMo8qcatqoJcfDf_.Fg--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-24/92c5cfa0-1043-11e7-bd59-dfcb9136547c_kan1404.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "9.6KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "90%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/jP1xJzU8wSvtJWwO0TyPOA--/Zmk9c3RyaW07aD0xNjA7cHlvZmY9MDtxPTgwO3c9MzQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/48MDN5zoeUKOCDilx8peTA--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-24/f7cfa1a0-102a-11e7-9e6f-239fe5643246_deal.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "9.2KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "90%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/hBNugF.53IRkkOZNW0H0Mg--/Zmk9c3RyaW07aD0xNjA7cHlvZmY9MDtxPTgwO3c9MzQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/fvQXcao03wbYDp0oKK5WLg--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-23/acce71d0-0ffe-11e7-958f-2bc769fb6491_tweet.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "8.5KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "90%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/VGJwmoIMzr3nAlutqu.HwQ--/Zmk9c3RyaW07aD0xNjA7cHlvZmY9MDtxPTgwO3c9MzQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://s.yimg.com/lo/api/res/1.2/aMiz4eoeNIEBIUpuRRNz0Q--~C/Zmk9Zml0O3c9MTQwNDtoPTc1NjtweG9mZj0wO3B5b2ZmPTA7O2FwcGlkPXByb2Rlc2sy/https://s.yimg.com/os/creatr-images/GLB/2017-03-23/38b1fc20-0fe7-11e7-889f-9b1797d36320_siaNH.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "7.8KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "89%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/iu/api/res/1.2/ZnLcfU8BbwUX.hhG_PTZOA--/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7aD03MDtxPTEwMDt3PTcw/http://l.yimg.com/dh/ap/default/170214/Xavier_ncaab70x70.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "5.5KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "84%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/TYSXYsHmWBONjx_Quk5k.Q--/Zmk9c3RyaW07aD0xMDc7cHlvZmY9MDtxPTk1O3c9MTkwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/people_218/5f5e5321480469269a12faccfc4008b9"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "4KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "46%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/iu/api/res/1.2/8gaJCWZh0AenfdT8AylcLQ--/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7aD03MDtxPTEwMDt3PTcw/http://l.yimg.com/xe/i/us/sp/v/ncaab/teams/83/70x70/aaq.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "3KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "72%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/nn/lib/metro/300_250_Human_Touch_mail.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.8KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "11%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/nhoqbGmbkzxJOw1athBBig--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_us/News/ap_webfeeds/3ed62d15000c4bb294d5c2abce0bc143.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.4KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "18%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/OvVnXCRiFVHzXMSXXEP1Kg--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://slingstone.zenfs.com/offnetwork/2b58d92159c814519e6bf6a00bae36cb"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.4KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "18%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/sn1Tm52O0A34bTXyOlifmg--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-GB/homerun/international_business_times_news_7/590ca1b2d474086debf8d6bc9beb7f69"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.3KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "19%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/3rQfmja1rxWX9y23b0R0GQ--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://slingstone.zenfs.com/offnetwork/432b4684046c13065694aa14a1b4cbec"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.3KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "17%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/JW0M0dQ3j3R4tgy4eQd9vg--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/ibtimes_176/0c82666aa3517446483f54f02606ce32"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.2KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "19%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/lrbR8tcYoFK8yMOgTKVdSQ--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://l.yimg.com/yp/offnetwork/7dae715b86bf20e1c482454b6c3d2371"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1.1KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "17%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/DiUvtThWNuRgEqcK2lt_4A--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-GB/homerun/international_business_times_news_7/483dd8a6d0556d43493a0985838afd1d"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "1KiB"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "17%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/uu/api/res/1.2/99dMzDEeDDdnNJflz_pFfA--/Zmk9c3RyaW07aD0xNDA7cHlvZmY9MDtxPTkwO3c9MTQwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_us/News/afp.com/8a71b153e04f8f1a2b6ba22e0b282dcbc44beb6b.jpg.cf.jpg"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "914B"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "18%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/os/mit/ape/w/d8f6e02/dark/fair_day.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "773B"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "30%"
+          }
+         ]
+        }
+       },
+       {
+        "result": {
+         "format": "Compressing and resizing {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+         "args": [
+          {
+           "type": "URL",
+           "key": "URL",
+           "value": "https://s.yimg.com/os/mit/ape/w/d8f6e02/dark/partly_cloudy_day.png"
+          },
+          {
+           "type": "BYTES",
+           "key": "SIZE_IN_BYTES",
+           "value": "722B"
+          },
+          {
+           "type": "PERCENTAGE",
+           "key": "PERCENTAGE",
+           "value": "29%"
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "PrioritizeVisibleContent": {
+    "localizedRuleName": "Prioritize visible content",
+    "ruleImpact": 0.0,
+    "groups": [
+     "SPEED"
+    ],
+    "summary": {
+     "format": "You have the above-the-fold content properly prioritized. Learn more about {{BEGIN_LINK}}prioritizing visible content{{END_LINK}}.",
+     "args": [
+      {
+       "type": "HYPERLINK",
+       "key": "LINK",
+       "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "version": {
+  "major": 1,
+  "minor": 15
+ }
+}
