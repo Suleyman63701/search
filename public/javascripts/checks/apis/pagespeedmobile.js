@@ -1,7 +1,7 @@
 var request= require('request');
 
 var pageInsightsQuery = function(url, callback){
-  var apikey = "AIzaSyCNaOdODmRoJTDbt6xf_XEdTxcA44rBB10";
+  var apikey = "your api key";
 
   var getURL = function(url) {
     var theURL = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url='+url+'&strategy=mobile'+'&key='+apikey;
